@@ -1,0 +1,27 @@
+.ellipse__svg--left {
+    position: absolute;
+    background-image: url("../image/svg/ellipse_left.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -150px;
+}
+
+.ellipse__svg--right {
+    position: absolute;
+    background-image: url("../image/svg/ellipse_right.svg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: top;
+    /* background-size: 400px; */
+    z-index: -1;
+    width: 100%;
+    left: 0;
+    /* top: 0; */
+    height: 100%;
+    /* transform: rotate(90deg); */
+    /* opacity: 0.1; */
+}

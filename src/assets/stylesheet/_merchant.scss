@@ -1,0 +1,12 @@
+.merchant-board {
+    /* Rectangle 6.26 */
+    @apply flex flex-col items-center justify-center;
+    min-width: 360px;
+    height: 300px;
+    width: 100%;
+    background: #232243;
+    opacity: 0.9;
+    border-radius: 2px;
+    margin-right: 0.75rem;
+    flex-grow: 1
+}

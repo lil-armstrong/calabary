@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import './typography';
+@import './merchant';
+@import './svg';
+
+@layer utilities {
+  .scroll-snap-none {
+    scroll-snap-type: none;
+  }
+
+  .scroll-snap-x {
+    scroll-snap-type: x;
+  }
+
+  .scroll-snap-y {
+    scroll-snap-type: y;
+  }
+
+  .hide-scrollbar {
+    /* IE and Edge */
+    -ms-overflow-style: none;
+    /* Firefox */
+    scrollbar-width: none;
+  }
+  /* Chrome*/
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .btn {
+    padding: 8px;
+    border: 1px #aaa solid;
+  }
+
+  .btn.btn--sm {
+    font-size: 0.75rem;
+  }
+
+  button:disabled {
+    @apply opacity-5;
+  }
+
+  .text-accent {
+    color: #0072e1;
+  }
+
+  .booking-banner {
+    min-height: 460px;
+    left: 0;
+    background: #0072e1;
+  }
+
+  .boxy-image {
+    position: relative;
+    isolation: isolate;
+    border: 2px solid #0072e1;
+    /* width: 200px; */
+    /* height: 200px; */
+    display: block;
+    background: #000;
+
+    picture {
+      @apply object-cover border-2 overflow-hidden;
+      width: 100%;
+      height: 100%;
+      img{
+        @apply object-cover w-full h-full;
+        object-position: center;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      width: 50%;
+      height: 100px;
+      content: "";
+      transform: translate(10px, 10px);
+      bottom: 0;
+      right: 0;
+      border: 1px solid white;
+      z-index: -1;
+    }
+
+    &::before {
+      position: absolute;
+      width: 50%;
+      height: 100px;
+      content: "";
+      top: 0;
+      border: 1px solid white;
+      z-index: -1;
+      left: 0;
+      transform: translate(-10px, -10px);
+    }
+  }
+
+  .home-banner {
+    position: relative;
+    background-image: url("../image/banner/home_banner.png");
+  }
+
+  .home-banner::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: #000000bf;
+  }
+  @media screen and (min-width: 768px) {
+    .mansonry {
+      grid-auto-rows: minmax(200px, auto);
+      grid-template-rows: repeat(3, minmax(200px, auto));
+      grid-auto-columns: minmax(200px, 1fr);
+      display: grid;
+      gap: 15px;
+    }
+
+    .mansonry .mansonry__item.item--fourth,
+    .mansonry .mansonry__item.item--third {
+      grid-row: 2 / -1;
+    }
+
+    .mansonry .mansonry__item.item--first {
+      grid-column: 1 / 3;
+    }
+
+    .mansonry .mansonry__item.item--second {
+      grid-column: 3;
+      grid-row: 1 / 3;
+    }
+
+    .mansonry .mansonry__item.item--fifth {
+      grid-column: 3;
+      grid-row: 3;
+    }
+  }
+}
