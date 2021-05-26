@@ -1,7 +1,6 @@
 <template>
   <section class="hero-container">
     <slot></slot>
-    <the-search-bar></the-search-bar>
   </section>
 </template>
 <style>
@@ -15,11 +14,7 @@
 }
 </style>
 <script>
-import TheSearchBar from '@/components/TheSearchBar'
 export default {
-  name: 'the-hero',
-  components: {
-    TheSearchBar
-  }
-}
+  name: "the-hero"
+};
 </script>

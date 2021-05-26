@@ -95,20 +95,13 @@
       transform: translate(-10px, -10px);
     }
   }
-
   .home-banner {
     position: relative;
     background-image: url("../image/banner/home_banner.png");
   }
-
-  .home-banner::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: absolute;
-    background: #000000bf;
+  .about-banner {
+    position: relative;
+    background-image: url("../image/banner/home_banner.png");
   }
   @media screen and (min-width: 768px) {
     .mansonry {

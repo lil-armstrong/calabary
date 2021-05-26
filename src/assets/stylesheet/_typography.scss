@@ -1,8 +1,9 @@
-@layer utilities {
+@layer base {
   body,
   html {
     @apply font-sans;
     color: #7b7b7b;
+    font-size: 14px;
   }
 
   h1,
@@ -14,6 +15,9 @@
     @apply font-sans
   }
 
+  .headline-1 {
+    font-size: 40px;
+  }
   .headline-2 {
     font-style: normal;
     font-weight: normal;
